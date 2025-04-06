@@ -1,0 +1,41 @@
+.keyboard{
+    width: 100%;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repea(3, 1fr);
+}
+
+.keypad{
+    grid-column: 2/3;
+    gap: 0.3em;
+    flex-wrap: wrap;
+}
+
+.key{
+    height: 4em;
+    width: 2.5em;
+    color: black;
+    background-color: rgb(184, 182, 182);
+    border-radius: 5px;
+    user-select: none;
+}
+
+.key:active{
+    color: gray;
+    background-color: black;
+}
+
+.space{
+    width: 1em;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 667px){
+
+}

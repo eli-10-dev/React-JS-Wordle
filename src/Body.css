@@ -1,0 +1,37 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.clue{
+    flex: 1;
+    font-size: 1.5em;
+    font-weight: 475;
+} 
+
+.input-boxes{
+    border: 1px solid black;
+    flex: 5;
+    gap: 0.5em;
+    flex-direction: column;
+    /* justify-content: flex-start!important; */
+    user-select: none;
+}
+
+.tile-container{
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.tile{
+    height: 5em;
+    width: 5em;
+    border: 1px solid black;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

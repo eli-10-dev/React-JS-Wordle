@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height: 8vh;
+    font-weight: bold;
+}
+
+.letter{
+    height: 1.5em;
+    width: 1.5em;
+    text-align: center;
+    color: rgb(156, 155, 155);
+    background-color: green;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.letter:hover{
+    color: white;
+}
