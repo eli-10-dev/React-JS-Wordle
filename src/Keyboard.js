@@ -1,11 +1,19 @@
 import React from "react";
 import "./Keyboard.css";
 
-function Keyboard(){
+function Keyboard( {handleKeyDown} ){
+
+    const onClick = (e) => {
+        // Make sure the clicked element has the class 'key' to avoid clicks on spaces etc.
+        if (e.target.classList.contains("key")) {
+        const keyVal = e.target.getAttribute("value");
+        handleKeyDown(keyVal);
+        }
+    };
 
     return(
         <div className="keyboard">
-            <div className="keypad flex">
+            <div className="keypad flex" onClick={onClick}>
                 <div className="key flex" value="Q">Q</div>
                 <div className="key flex" value="W">W</div>
                 <div className="key flex" value="E">E</div>
@@ -27,13 +35,15 @@ function Keyboard(){
                 <div className="key flex" value="K">K</div>
                 <div className="key flex" value="L">L</div>
                 <div className="space"></div>
+                <div className="key flex" value="Enter">Enter</div>
                 <div className="key flex" value="Z">Z</div>  
                 <div className="key flex" value="X">X</div>           
                 <div className="key flex" value="C">C</div>
                 <div className="key flex" value="V">V</div>
                 <div className="key flex" value="B">B</div>
                 <div className="key flex" value="N">N</div>
-                <div className="key flex" value="M">M</div>     
+                <div className="key flex" value="M">M</div>  
+                <div className="key flex" value="Delete">DEL</div>   
             </div>
         </div>
     );

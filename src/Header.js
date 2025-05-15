@@ -3,7 +3,6 @@ import "./Header.css";
 
 function Header() {
 const text = "JOSHDLE".split("");
-console.log(text);
 const title = text.map((el) => <p className="letter">{el}</p>);
 
 
